@@ -11,6 +11,6 @@ var runningSum = function(input) {
     for (i=0; i<runningSum.length; i++){
         sum = sum+input[i];
         output = output.push(sum);
+        return output;
    }
-    return output;
 }
