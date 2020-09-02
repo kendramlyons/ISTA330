@@ -9,7 +9,7 @@ var runningSum = function(input) {
     var output = [];
     var sum = 0;
     for (i=0; i<runningSum.length; i++){
-        sum += input[i];
+        sum = sum+input[i];
         output = output.push(sum);
    }
     return output;
