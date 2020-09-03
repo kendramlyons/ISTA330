@@ -18,5 +18,7 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
     if (totalCookies%cookies.length != 0){
         return false;
         }
-    return true; 
+    else if (totalCookies%cookies.length === 0){
+        return true; 
+    }
  };
