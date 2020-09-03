@@ -13,12 +13,13 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
     //add all values in cookies to extraCookies, then divide by length and check if the remainder is 0
     var totalCookies = 0; 
     for(i=0; i<cookies.length; i++){
-        totalCookies+cookies[i];
+        totalCookies+=cookies[i];
         }
+        totalCookies+=extraCookies;
     if (totalCookies%cookies.length != 0){
         return false;
         }
     else if (totalCookies%cookies.length === 0){
         return true; 
-    }
+        }
  };
