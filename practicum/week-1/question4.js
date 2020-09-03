@@ -14,7 +14,7 @@ var howManyCommon = function(A, B) {
     repeats = 0
     for(i=0; i<A.length; i++){
         for(j=0; j<B.length; j++){
-            if(A[i]===B[j]){
+            if(A[i]==B[j]){
                 repeats+=1
 }
 }
