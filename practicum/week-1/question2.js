@@ -15,11 +15,9 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
     for(i=0; i<cookies.length; i++){
         totalCookies+=cookies[i];
         }
-        totalCookies+=extraCookies;
+    totalCookies+=extraCookies;
     if (totalCookies%cookies.length != 0){
         return false;
         }
-    else if (totalCookies%cookies.length === 0){
-        return true; 
-        }
+    return true; 
  };
