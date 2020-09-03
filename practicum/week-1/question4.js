@@ -18,7 +18,6 @@ var howManyCommon = function(A, B) {
                 repeats+=1;
             }
         }
-    return repeats
     }
-
+    return repeats
 };
