@@ -30,4 +30,4 @@ var minimalReduction = function(n) {
     }
 };
 
-console.log('hi');
+// console.log('hi');
