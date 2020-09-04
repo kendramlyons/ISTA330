@@ -16,18 +16,18 @@ var minimalReduction = function(n) {
     while (n != 0){
         if (n % 4 == 0){
             n = n/4;
-            num_ops += 1;
+            num_ops+=1;
         }
         else if (n % 3 == 0){
             n = n/3;
-            num_ops += 1;
+            num_ops+=1;
         }
         else if (n > 0){
             n = n-1;
-            num_ops +=1 ;
+            num_ops+=1;
         }
     return num_ops;
     }
 };
 
-// console.log('hi');
+console.log('hi');
