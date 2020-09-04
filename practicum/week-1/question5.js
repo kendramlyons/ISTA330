@@ -18,11 +18,11 @@ var minimalReduction = function(n) {
             n = n/4;
             num_ops+=1;
         }
-        if (n % 3 == 0){
+        else if (n % 3 == 0){
             n = n/3;
             num_ops+=1;
         }
-        if (n > 0){
+        else if (n > 0){
             n = n-1;
             num_ops+=1;
         }
