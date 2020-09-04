@@ -24,7 +24,7 @@ var minimalReduction = function(n) {
         }
         if (n > 0){
             n = n-1;
-            num_ops+=1
+            num_ops+=1;
         }
     return num_ops;
     }
