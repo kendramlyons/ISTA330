@@ -26,8 +26,8 @@ var minimalReduction = function(n) {
             n = n-1;
             num_ops+=1;
         }
-    return num_ops;
     }
+    return num_ops;
 };
 
 console.log('hi');
