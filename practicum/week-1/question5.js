@@ -13,7 +13,7 @@ output: 3
 
 var minimalReduction = function(n) {
     var num_ops = 0;
-    while (n != 0){
+    while (n > 0){
         if (n % 4 == 0){
             n = n/4;
             num_ops+=1;
