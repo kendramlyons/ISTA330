@@ -15,10 +15,11 @@ var median = function(input) {
     else if (input.length % 2 == 0) {
         var mp1 = (input.length / 2) - 1;
         var mp2 = (input.length / 2);
-        var medValue = (index[mp1] + index[mp2]) / 2;
-        //var mp1 = input[input.length / 2]; // 8/2 = 4
-        // var mp2 = input[mp1 - 1]; // 4-1 = 3
-        // var medValue = (mp1+mp2)/2;
+        var medValue = (input[mp1] + input[mp2]) / 2;
         return medValue;
     }
 };
+
+        //var mp1 = input[input.length / 2]; // 8/2 = 4
+        // var mp2 = input[mp1 - 1]; // 4-1 = 3
+        // var medValue = (mp1+mp2)/2;
