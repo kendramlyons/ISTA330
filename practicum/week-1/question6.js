@@ -13,9 +13,9 @@ var median = function(input) {
     }
     //test for even length
     else if (input.length % 2 == 0) {
-        var mp1 = input.length/2; // 8/2 = 4
+        var mp1 = input.length / 2; // 8/2 = 4
         var mp2 = mp1 - 1; // 4-1 = 3
-        var medValue = (input[mp1]+input[mp2])/2
+        var medValue = (input[mp1]+input[mp2])/2;
         return medValue;
     }
 };
