@@ -11,20 +11,10 @@ output: 4
 */
 
 var maxSumOfMins = function(input) {
-       // var numPairs = input.length/2;
        var minsSum = 0;
        var ordArray = input.sort();
-       // var min = input.min()
-       // var max = input.max()
-       var minsArray = [];
        for(i=0; i<input.length; i+2) {
-              minsArray.push(ordArray[i]);
               minsSum += ordArray[i];
        }
        return minsSum;
-              // ordArray[i] //starts at min 
-              // 'Pair '+String(i)+': '
-              // for(j=0; j<B.length; j++){
-              // }
-
 };
