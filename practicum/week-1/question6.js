@@ -19,7 +19,3 @@ var median = function(input) {
         return medValue;
     }
 };
-
-        //var mp1 = input[input.length / 2]; // 8/2 = 4
-        // var mp2 = input[mp1 - 1]; // 4-1 = 3
-        // var medValue = (mp1+mp2)/2;
