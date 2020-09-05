@@ -8,12 +8,14 @@ output: 4
        because we can make the following pairs: (4, 8) and (3, 0) and 
        min(4,8) + min(3,0) = 4
        whatever other pairs we choose the sum of the minimums will not exceed 4.
+input: [1, 2, 3, 4, 5, 6, 7, 8]
 */
 
 var maxSumOfMins = function(input) {
+       var numPairs = input.length/2;
        var minsSum = 0;
-       var ordArray = input.sort();
-       for(i=0; i<input.length; i+2) {
+       var ordArray = input.sort(); //sort array numerically
+       for(i=0; i<numPairs; i+=2) { //traverse array adding min values
               minsSum += ordArray[i];
        }
        return minsSum;
