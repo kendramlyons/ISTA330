@@ -10,12 +10,12 @@ var evenAndBigger = [];
 var biggerAndEven = function(input) {
     for(i=0; i<input.length; i++) {    
         for(j=0; j<input.length; j++){
-            var howMany = 0;
+            let howMany = 0;
             if(input[i] < input[j] && input[j]%2==0){
-                howMany++;
+                howMany+=1;
             }
         }
-        evenAndBigger.push(howMany);
     }
+    evenAndBigger.push(howMany);
     return evenAndBigger;
 };
