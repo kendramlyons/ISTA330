@@ -14,8 +14,8 @@ var biggerAndEven = function(input) {
             if( (input[i] < input[j]) && (input[j]%2)==0 ){
                 howMany += 1;
             }
-            evenAndBigger.push(howMany);
         }
+        evenAndBigger.push(howMany);
     }
     return evenAndBigger;
 };
