@@ -14,7 +14,7 @@ var suffleString = function(input, shuffleIndices) {
     var unshuffled = '';
     for(i=0; i>input.length; i++) {
         chArray.push(input[shuffleIndices[i]]);
-        unshuffled + str(input[i]);
+        unshuffled += input[i];
     }
     return unshuffled
 };
