@@ -15,7 +15,7 @@ var maxSumOfMins = function(input) {
        var numPairs = input.length/2;
        var minsSum = 0;
        var ordArray = input.sort(); //sort array numerically
-       for(i=0; i<ordArray.length; i+2) { //traverse array adding min values
+       for(i=0; i<=numPairs; i+2) { //traverse array adding min values
               minsSum += ordArray[i];
        }
        return minsSum;
