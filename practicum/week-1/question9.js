@@ -1,5 +1,5 @@
 /*
-We have a string, input, and an integer array, shuffleIndices.
+We have a *shuffled* string, input, and an integer array, shuffleIndices.
 We want to shuffle the string based on the shufleIndices array.
 
 Example:
@@ -9,5 +9,12 @@ output: 'hello'
 */
 
 var suffleString = function(input, shuffleIndices) {
-
+    // var sortIndices = shuffleIndices.sort();
+    var chArray = [];
+    var unshuffled = '';
+    for(i=0; i>input.length; i++) {
+        chArray.push(input[shuffleIndices[i]]);
+        unshuffled + str(chArray[i]);
+    }
+    return unshuffled
 };
