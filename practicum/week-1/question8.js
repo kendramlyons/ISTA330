@@ -6,12 +6,12 @@ Example:
 input: [23, 44, 12, 4]
 output: [1, 0, 1, 2]
 */
-var evenAndBigger = [];
 var biggerAndEven = function(input) {
+    var evenAndBigger = [];
     for(i=0; i<input.length; i++) {    
         for(j=0; j<input.length; j++){
-            let howMany = 0;
-            if(input[i] < input[j] && input[j]%2==0){
+            var howMany = 0;
+            if((input[i] < input[j]) && (input[j]%2==0)){
                 howMany+=1;
             }
         }
