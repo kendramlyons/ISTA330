@@ -15,7 +15,7 @@ var biggerAndEven = function(input) {
                 howMany+=1;
             }
         }
+        evenAndBigger.push(howMany);
     }
-    evenAndBigger.push(howMany);
     return evenAndBigger;
 };
