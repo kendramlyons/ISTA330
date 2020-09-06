@@ -7,10 +7,10 @@ input: [23, 44, 12, 4]
 output: [1, 0, 1, 2]
 */
 var evenAndBigger = [];
-var howMany = 0;
 var biggerAndEven = function(input) {
     for(i=0; i<input.length; i++) {    
         for(j=0; j<input.length; j++){
+            var howMany = 0;
             if(input[i] < input[j] && input[j]%2==0){
                 howMany++;
             }
