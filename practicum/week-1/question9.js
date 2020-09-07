@@ -16,5 +16,5 @@ var suffleString = function(input, shuffleIndices) {
         chArray.push(input[shuffleIndices[i]]);
         unshuffled += input[i];
     }
-    return unshuffled
+    return unshuffled;
 };
