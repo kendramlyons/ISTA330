@@ -17,6 +17,7 @@ var suffleString = function(input, shuffleIndices) {
     while (unshuffled.length < input.length) {
         if (shuffleIndices[i] == i) {
             unshuffled.concat(input[i]);
+            break;
         }
         i++;
     }
