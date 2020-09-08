@@ -5,16 +5,20 @@ We want to shuffle the string based on the shufleIndices array.
 Example:
 input: 'llheo', shuffleIndices = [2, 3, 0, 1, 4]
 output: 'hello'
-
+    // var sortIndices = shuffleIndices.sort();
+    // var chArray = [];        
+    // chArray.push(input[shuffleIndices[i]]);
+    // for(i=0; i<chArray.length; i++) {
 */
 
 var suffleString = function(input, shuffleIndices) {
-    // var sortIndices = shuffleIndices.sort();
-    // var chArray = [];
     var unshuffled = '';
-    for(i=0; i>input.length; i++) {
-        // chArray.push(input[shuffleIndices[i]]);
-        unshuffled.concat(input[i]);
+    var i = 0;
+    while (unshuffled.length < input.length) {
+        if (shuffleIndices[i] == i) {
+            unshuffled.concat(input[i]);
+        }
+        i++;
     }
     return unshuffled;
 };
