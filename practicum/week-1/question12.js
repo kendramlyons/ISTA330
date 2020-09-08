@@ -24,4 +24,5 @@ var maxBalanceNumber = function(input) {
         i += 1;
       }
     }
+    return balSubStrs;
 };
