@@ -13,8 +13,8 @@ output: 'hello'
 
 var suffleString = function(input, shuffleIndices) {
     var unshuffled = '';
-    var i = 0;
-    while (unshuffled.length < input.length) {
+    var i = unshuffled.length;
+    while (i<input.length) {
         if (shuffleIndices[i] == i) {
             unshuffled.concat(input[i]);
             break;
