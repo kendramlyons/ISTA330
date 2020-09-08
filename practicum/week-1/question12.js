@@ -16,7 +16,7 @@ output: 4 because the following partition has the highest number of balanced sub
 var maxBalanceNumber = function(input) {
     var balSubStrs = 0;
     for (i = 0; i < input.length;) {
-      if (input[i] != input[i + 1]) {
+      if (input[i] !== input[i + 1]) {
         balSubStrs += 1;
         i += 2;
       }
