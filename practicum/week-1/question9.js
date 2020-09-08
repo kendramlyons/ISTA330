@@ -12,14 +12,14 @@ output: 'hello'
 */
 
 var suffleString = function(input, shuffleIndices) {
-    var unshuffled = [];
-    var i = unshuffled.length;
-    while (i<input.length) {
-        if (shuffleIndices[i] == i) {
-            unshuffled.push(input[i]);
-            break;
-        }
-        i++;
-    }
-    return unshuffled;
+    // var unshuffled = [];
+    // var i = unshuffled.length;
+    // while (i<input.length) {
+    //     if (shuffleIndices[i] == i) {
+    //         unshuffled.push(input[i]);
+    //         break;
+    //     }
+    //     i++;
+    // }
+    // return unshuffled;
 };
