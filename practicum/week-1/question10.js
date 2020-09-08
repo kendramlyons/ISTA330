@@ -7,5 +7,10 @@ output: 7 - 2 = 5
 */
 
 var maxMinusMin = function(n) {
-
+    var nArray = n.split();
+    nArray = nArray.sort();
+    var min = nArray[0];
+    var max = nArray[(nArray.length - 1)];
+    var mmm = max - min;
+    return mmm
 };
