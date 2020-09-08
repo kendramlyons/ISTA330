@@ -23,7 +23,7 @@ output: 'hello'
 var suffleString = function(input, shuffleIndices) {
     var unshuffled = '';
     for (i=0; i<input.length; i++) {
-        for (j=0; i<input.length; j++) {
+        for (j=0; j<shuffleIndices.length; j++) {
             if (shuffleIndices[j] == i) {
                 unshuffled += input[j];
             }
