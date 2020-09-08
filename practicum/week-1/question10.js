@@ -12,5 +12,5 @@ var maxMinusMin = function(n) {
     var min = nArray[0];
     var max = nArray[(nArray.length - 1)];
     var mmm = max - min;
-    return mmm
+    return mmm;
 };

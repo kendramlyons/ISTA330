@@ -12,11 +12,11 @@ output: 'hello'
 */
 
 var suffleString = function(input, shuffleIndices) {
-    var unshuffled = '';
+    var unshuffled = [];
     var i = unshuffled.length;
     while (i<input.length) {
         if (shuffleIndices[i] == i) {
-            unshuffled.concat(input[i]);
+            unshuffled.push(input[i]);
             break;
         }
         i++;
