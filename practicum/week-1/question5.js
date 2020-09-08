@@ -30,4 +30,3 @@ var minimalReduction = function(n) {
     return num_ops;
 };
 
-console.log('hi');
