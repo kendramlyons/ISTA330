@@ -10,10 +10,10 @@ output: 'hello'
 
 var suffleString = function(input, shuffleIndices) {
     // var sortIndices = shuffleIndices.sort();
-    var chArray = [];
+    // var chArray = [];
     var unshuffled = '';
     for(i=0; i>input.length; i++) {
-        chArray.push(input[shuffleIndices[i]]);
+        // chArray.push(input[shuffleIndices[i]]);
         unshuffled.concat(input[i]);
     }
     return unshuffled;
