@@ -14,12 +14,11 @@ Example:
 
 var hasDuplicates = function(input) {
     for (i=0; i<input.length; i++) {
-        var compare = input[i];
+        var test_duplicate = input[i];
         for (j=0; j<input.length; j++) {
-            if (input[j] == compare) {
+            if (test_duplicate == input[j]) {
                 return true; 
             }
         }
     }
-    return false;
 };
