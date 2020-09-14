@@ -20,6 +20,9 @@ Example: input: [-12,3,-1,5,-2,1,-7]
             if (running_sum > big_sum) {
                 big_sum = running_sum;
             }
+            else {
+                break
+            }
         }
     }
     return big_sum;
