@@ -7,9 +7,16 @@ find the subarray
 Example: input: [-12,3,-1,5,-2,1,-7]
          output: 7
                  because [3,-1,5] has the largest sum.
-          */
+ running_sum += input[i]
+        for(j=0; j < (input.length); j++) {
+            running_sum += input[j]
 
- var largestSubarray = function(input) {
+            else {
+                break
+            }
+        }
+          */
+var largestSubarray = function(input) {
     var big_sum = 0;
     var running_sum = 0;
     for(i=0; i<input.length; i++) {
@@ -19,7 +26,6 @@ Example: input: [-12,3,-1,5,-2,1,-7]
             running_sum += input[j]
             if (running_sum > big_sum) {
                 big_sum = running_sum;
-                running_sum += input[j+1];
             }
             else {
                 break
@@ -28,3 +34,4 @@ Example: input: [-12,3,-1,5,-2,1,-7]
     }
     return big_sum;
  };
+
