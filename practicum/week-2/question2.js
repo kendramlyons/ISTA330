@@ -19,7 +19,6 @@ Example: input: [-12,3,-1,5,-2,1,-7]
             running_sum += input[j]
             if (running_sum > big_sum) {
                 big_sum = running_sum;
-                running_sum += input[j+1];
             }
             else {
                 break
