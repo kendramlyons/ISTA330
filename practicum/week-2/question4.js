@@ -22,5 +22,5 @@ var hasDuplicates = function(input) {
     }
     return false;
 };
-let test = hasDuplicates([3,5,90,21]);
-console.log(test);
+// let test = hasDuplicates([3,5,90,21]);
+// console.log(test);
