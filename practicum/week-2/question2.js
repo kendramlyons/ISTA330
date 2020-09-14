@@ -22,7 +22,7 @@ var largestSubarray = function(input) {
     for(i=0; i<input.length; i++) {
         big_sum += input[i];
         running_sum += input[i]
-        for(j=1; j < (input.length-1); j++) {
+        for(j=1; j<(input.length-1); j++) {
             running_sum += input[j]
             if (running_sum > big_sum) {
                 big_sum = running_sum;
