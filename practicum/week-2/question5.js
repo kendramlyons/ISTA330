@@ -17,7 +17,7 @@ output: true
 */
 
 var isMonotonic = function(input) {
-
+    
 };
 
 console.log('hi');

@@ -14,7 +14,7 @@ Example:
 
 var hasDuplicates = function(input) {
     for (i=0; i<input.length; i++) {
-        for (j=0; j<(input.length); j++) {
+        for (j = (i+1); j < (input.length); j++) {
             if (input[i] == input[j]) {
                 return true; 
             }
@@ -22,3 +22,5 @@ var hasDuplicates = function(input) {
     }
     return false;
 };
+let test = hasDuplicates([3,5,90,21]);
+console.log(test);
