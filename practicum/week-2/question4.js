@@ -20,6 +20,7 @@ var hasDuplicates = function(input) {
                 return true; 
             }
         }
+        return false;
     }
-    return false;
+
 };
