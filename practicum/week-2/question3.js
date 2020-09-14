@@ -13,5 +13,5 @@ output: [
 */
 
 var PascalTriangle = function(n) {
-
+    
 };
