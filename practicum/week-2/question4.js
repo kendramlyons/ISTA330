@@ -20,4 +20,5 @@ var hasDuplicates = function(input) {
             }
         }
     }
+    return false;
 };
