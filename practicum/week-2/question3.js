@@ -31,7 +31,7 @@ var PascalTriangle = function(n) {
     var result = []
     for (i = 0; i < n; i++) {
         result.push([]);
-        for (j = 0; j < (i + 1); j++) {
+        for (j = 0; j < n; j++) {
             if (j == 0 || i == 0 || i == 1) {
                 result[i][j].push(1);
             }
