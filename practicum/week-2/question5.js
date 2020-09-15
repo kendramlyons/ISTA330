@@ -33,6 +33,6 @@ var isMonotonic = function(input) {
     }
     return answer; 
 };
-// test = isMonotonic([29,6,31,2,23,40]);
 
+// var test = isMonotonic([0,2,3,5,6,8]);
 // console.log(test);
