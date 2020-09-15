@@ -15,9 +15,9 @@ help from David Fimbres
 */
 
 var PascalTriangle = function(n) {
-    // var result = new Array();
-    // for (i = 0; i < n; i++) {
-    //     result.push([]);
+    var result = new Array();
+    for (i = 0; i < n; i++) {
+        result.push([]);
     //     for (j = 0; j < (n-1); j++) {
     //         if (j == 0 || i == 0 || i == 1) {
     //             result[i][j].push(num(1));
@@ -27,8 +27,8 @@ var PascalTriangle = function(n) {
     //             result[i][j].push(pSum);
     //         }
     //     }
-    // }
-    // return result;
+    }
+    return result;
 };
 // let test = PascalTriangle(2);
 // console.log(test);
