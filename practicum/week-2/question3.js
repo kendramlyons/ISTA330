@@ -18,17 +18,16 @@ var PascalTriangle = function(n) {
     var result = new Array();
     for (i = 0; i < n; i++) {
         result.push([]);
-    //     for (j = 0; j < (n-1); j++) {
-    //         if (j == 0 || i == 0 || i == 1) {
-    //             result[i][j].push(num(1));
-    //         }
-    //         else {
-    //             var pSum = result[i-1][j-1] + result[i-1][j];
-    //             result[i][j].push(pSum);
-    //         }
-    //     }
+        for (j = 0; j < (i+1); j++) {
+            if (j == 0 || i == j) {
+                result[i][j] = 1;
+            }
+            else {
+                result[i][j] = result[i-1][j-1] + result[i-1][j];
+            }
+        }
     }
     return result;
 };
-// let test = PascalTriangle(2);
-// console.log(test);
+let test = PascalTriangle(4);
+console.log(test);
