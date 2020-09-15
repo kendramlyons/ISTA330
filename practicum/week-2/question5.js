@@ -17,7 +17,22 @@ output: true
 */
 
 var isMonotonic = function(input) {
-    
+//define a variable to store a boolean 
+    var answer; 
+        //start a for loop to traverse the array from left to right
+    for (i = 0; i < input.length; i++) {
+        //start another loop to compare adjacent values 
+        for (j = i+1; j < input.length; j++) {
+            if (input[i] < input[j] || input[j] < input [i]) {
+                answer = true;
+            }
+            else {
+                answer = false;
+            }
+        }
+    }
+    return answer; 
 };
+test = isMonotonic([29,6,31,2,23,40]);
 
-console.log('hi');
+console.log(test);

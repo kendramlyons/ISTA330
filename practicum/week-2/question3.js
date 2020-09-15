@@ -11,7 +11,7 @@ output: [
   [1,3,3,1] 
 ]
 
-help from David Fimbres 
+Help from David Fimbres 
 */
 
 var PascalTriangle = function(n) {

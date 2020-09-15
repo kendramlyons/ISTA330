@@ -10,6 +10,8 @@ if every element is distinct.
 Example:
  input: [19,1,1,23,23,4,3,23,1,2]
  output: true
+
+Help from Hamid Bahramian
 */
 
 var hasDuplicates = function(input) {

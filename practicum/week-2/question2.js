@@ -7,6 +7,8 @@ find the subarray
 Example: input: [-12,3,-1,5,-2,1,-7]
          output: 7
                  because [3,-1,5] has the largest sum.
+
+Help from Hamid Bahramian
 */
 var largestSubarray = function(input) {
     var big_sum = input[0];
