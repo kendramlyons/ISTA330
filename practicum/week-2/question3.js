@@ -15,20 +15,20 @@ help from David Fimbres
 */
 
 var PascalTriangle = function(n) {
-    var result = new Array();
-    for (i = 0; i < n; i++) {
-        result.push([]);
-        for (j = 0; j < (n-1); j++) {
-            if (j == 0 || i == 0 || i == 1) {
-                result[i][j].push(1);
-            }
-            else {
-                var pSum = result[i-1][j-1] + result[i-1][j];
-                result[i][j].push(pSum);
-            }
-        }
-    }
-    return result;
+    // var result = new Array();
+    // for (i = 0; i < n; i++) {
+    //     result.push([]);
+    //     for (j = 0; j < (n-1); j++) {
+    //         if (j == 0 || i == 0 || i == 1) {
+    //             result[i][j].push(num(1));
+    //         }
+    //         else {
+    //             var pSum = result[i-1][j-1] + result[i-1][j];
+    //             result[i][j].push(pSum);
+    //         }
+    //     }
+    // }
+    // return result;
 };
-let test = PascalTriangle(4);
-console.log(test);
+// let test = PascalTriangle(2);
+// console.log(test);
