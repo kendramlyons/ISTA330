@@ -32,11 +32,12 @@ var PascalTriangle = function(n) {
     for (i = 0; i < n; i++) {
         result.push([]);
         for (j = 0; j < (i + 1); j++) {
-            if (i == 0 || i == 1 || j == 0) {
+            if (j == 0 || i == 0 || i == 1) {
                 result[i][j].push(1);
             }
             else {
-                result[i][j].push((result[i-1][j-1]+result[i-1][j]));
+                var pSum = num(result[i-1][j-1]) + num(result[i-1][j])
+                result[i][j].push(pSum);
             }
         }
     }
