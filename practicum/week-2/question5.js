@@ -37,5 +37,5 @@ var isMonotonic = function(input) {
     return answer; 
 };
 
-var test = isMonotonic([12,6,2,2,2,0]);
-console.log(test);
+// var test = isMonotonic([12,6,2,2,2,0]);
+// console.log(test);
