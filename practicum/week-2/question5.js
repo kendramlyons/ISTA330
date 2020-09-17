@@ -23,7 +23,10 @@ var isMonotonic = function(input) {
     for (i = 0; i < input.length; i++) {
         //start another loop to compare adjacent values 
         for (j = i+1; j < input.length; j++) {
-            if (input[i] < input[j] || input[j] < input [i]) {
+            if (input[i] < input[j]) {
+                answer = true;
+            }
+            else if (input[j] < input[i]) {
                 answer = true;
             }
             else {
@@ -34,5 +37,5 @@ var isMonotonic = function(input) {
     return answer; 
 };
 
-// var test = isMonotonic([0,2,3,5,6,8]);
-// console.log(test);
+var test = isMonotonic([12,6,2,2,2,0]);
+console.log(test);
