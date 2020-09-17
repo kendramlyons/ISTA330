@@ -1,5 +1,4 @@
-
-/*An array is monotonic if it is 
+/* An array is monotonic if it is 
 either monotone increasing 
 or monotone decreasing.
 
@@ -40,5 +39,5 @@ var isMonotonic = function(input) {
     return answer; 
 };
 
-var test = isMonotonic([11,4,5,9,2,10]);
+let test = isMonotonic([11,4,5,9,2,10]);
 console.log(test);
