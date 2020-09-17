@@ -23,19 +23,22 @@ var isMonotonic = function(input) {
     for (i = 0; i < input.length; i++) {
         //start another loop to compare adjacent values 
         for (j = i+1; j < input.length; j++) {
-            if (input[i] < input[j]) {
-                answer = true;
+            if (input[0] < input[1]) { // increasing 
+                if (input[i] < input[j]) {
+                    answer = true;
+                }
+                else answer = false; 
             }
-            else if (input[j] < input[i]) {
-                answer = true;
-            }
-            else {
-                answer = false;
+            else if (input[1] < input[0]) { // decreasing 
+                if (input[j] < input[i]) {
+                    answer = true;
+                }
+                else answer = false;
             }
         }
     }
     return answer; 
 };
 
-// var test = isMonotonic([12,6,2,2,2,0]);
-// console.log(test);
+var test = isMonotonic([12, 6, 2, 2, 2, 0]);
+console.log(test);
