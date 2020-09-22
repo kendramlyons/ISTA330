@@ -12,5 +12,20 @@ output: 2
 */
 
 var m_element = function(input) {
-
+    
+    //start a for loop to traverse the array from left to right
+    for (i = 0; i < input.length; i++) {
+        var count = 0;
+        var compare = input[i];
+        //start another loop to compare adjacent values 
+        for (j = i; j < input.length; j++) {
+            if (input[j] == compare) { 
+                count += 1
+                }
+        }
+        if (count > input.length/2) {
+            return input[i];
+        }
+    }
+    return -1
 };
