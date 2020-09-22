@@ -29,3 +29,6 @@ var m_element = function(input) {
     }
     return -1
 };
+
+// let test6 = m_element([1,2,3,4,5,6,7,8]);
+// console.log(test6)
