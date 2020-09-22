@@ -29,5 +29,5 @@ var m_element = function(input) {
     return -1
 };
 
-let test6 = m_element([1, 2, 2, 3, 2, 7, 2]);
-console.log(test6)
+// let test6 = m_element([1, 2, 2, 3, 2, 7, 2]);
+// console.log(test6)

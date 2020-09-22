@@ -29,5 +29,5 @@ var PascalTriangle = function(n) {
     }
     return result;
 };
-let test = PascalTriangle(4);
-console.log(test);
+// let test3 = PascalTriangle(4);
+// console.log(test3);

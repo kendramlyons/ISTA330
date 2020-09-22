@@ -39,5 +39,5 @@ var isMonotonic = function(input) {
     return answer; 
 };
 
-let test5 = isMonotonic([11,4,5,9,2,10]);
-console.log(test5);
+// let test5 = isMonotonic([11,4,5,9,2,10]);
+// console.log(test5);

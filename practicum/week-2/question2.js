@@ -28,5 +28,5 @@ var largestSubarray = function(input) {
     return big_sum;
  };
 
-// let test = largestSubarray([-17,3,1,5,-9,-1,10]);
-// console.log(test);
+// let test2 = largestSubarray([-17,3,1,5,-9,-1,10]);
+// console.log(test2);
