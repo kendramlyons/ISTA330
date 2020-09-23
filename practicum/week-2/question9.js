@@ -15,11 +15,11 @@ if 1 < n <= 9 total groups = n
 if 9 < n <= 18 total groups = 9
 if 18 < n <= 28 total groups = 10 
 if 28 < n <= 38 total groups = 11
-input: n = 19
+    input: n = 19
     total groups: 10 
 
 input: n = 24
-    total groups: 10
+total groups: 10
 output: 5
 [1, 10], [2, 11, 20], [3, 12, 21], [4,13,22], [5,14,23], [6,15,24], [7,16], [8,17], [9,18] [19]
 
@@ -28,29 +28,36 @@ input: n = 28
 output: 8 
 [1, 10], [2, 11, 20,], [3, 12, 21, 30], [4,13,22], [5,14,23], [6,15,24], [7,16,25], [8,17,26], [9,18,27] [19,28] [29]
 
-input n = 29-30
-total groups: 11
+    input n = 29-30
+    total groups: 11
 */
 
 var largestGroupsCount = function(n) {
-    var goGs = [];
+    var goGs = new Array;
+    //this loop makes a matrix of values from 1 to n
     for (var i = 1; i <= n; i++) {
         if (i <= 9) {
             var newGroup = [i];
             goGs.push(newGroup);
-        }
-        else {
+        }else {
             var addDigits = i.toString();
             addDigits = Number(addDigits[0]) + Number(addDigits[1]);
+            //this loop traverses the groups in goGs to check if their first element is addDigits
             for (j = 0; j < goGs.length; j++) {
                 if (goGs[j][0] == addDigits) {
                     goGs[j].push(i);
                 }
             }
-
         }
     }
-    return goGs;
+    //this loop makes an array of the length of the groups in goGs
+    for (k = 0; k < goGs.length; k++) {
+        var lengthM = goGs[k].length;
+        // console.log(lengthM);
+        var lengthsA = [];
+        lengthsA.push(lengthM);
+    }
+    return lengthsA
 };
 test9 = largestGroupsCount(28);
 console.log(test9);
