@@ -27,5 +27,5 @@ var d_integer = function(input) {
     }
     return -1
 };
-let test8 = d_integer([3,5,3,9,6,45,86,9]);
-console.log(test8)
+// let test8 = d_integer([3,5,3,9,6,45,86,9]);
+// console.log(test8)
