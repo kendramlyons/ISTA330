@@ -19,13 +19,12 @@ Example: input: [19,3,2,10,8,2,3,5]
             if (compare == input[j]) {
                 count += 1;
             }
-        }
-        if (count == 2 && !duplicates.includes(compare)) {
-            duplicates.push(compare);
+            if (count == 2 && !duplicates.includes(compare)) {
+                duplicates.unshift(compare);
+            }
         }
     }
     return duplicates;
-    
  };
-test2 = findDuplicates(-17,3,1,5,-9,1,10);
+test2 = findDuplicates([-17,3,1,5,-9,1,10]);
 console.log(test2);
