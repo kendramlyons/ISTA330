@@ -22,5 +22,5 @@ var transpose = function(M) {
     }
     return newM;
 };
-test7 = transpose([[1,2,3],[4,5,6]]); 
-console.log(test7);
+// test7 = transpose([[1,2,3],[4,5,6]]); 
+// console.log(test7);
