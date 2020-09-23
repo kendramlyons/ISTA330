@@ -8,7 +8,7 @@ of the original.
 Example: 
 input: [[1,2,3],[4,5,6]]
 output: [[1,4], [2,5], [3,6]]
-
+help from David Fimbres 
 */
 
 var transpose = function(M) {
