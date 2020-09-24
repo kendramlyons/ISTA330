@@ -51,13 +51,19 @@ var largestGroupsCount = function(n) {
         }
     }
     //this loop makes an array of the length of the groups in goGs
+    var lengthsA = [];
     for (k = 0; k < goGs.length; k++) {
         var lengthM = goGs[k].length;
-        // console.log(lengthM);
-        var lengthsA = [];
         lengthsA.push(lengthM);
     }
-    return lengthsA
+
+    var count = 0; 
+    for (l = 0; l < lengthsA.length; l++) {
+        if (lengthsA[l] == Math.max(...lengthsA)) {
+            count += 1; 
+        }
+    }
+    return count; 
 };
-test9 = largestGroupsCount(28);
+test9 = largestGroupsCount(11);
 console.log(test9);
