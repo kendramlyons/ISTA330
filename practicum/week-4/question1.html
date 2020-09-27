@@ -52,11 +52,11 @@
              waterlily
        ];
     function dispImgs() {
-        var dispImgs = document.getElementByID('flowersDiv');
+        var flowDiv = document.getElementByID('flowersDiv');
         for (i = 0; i < flowers.length; i++) {
             var imgEl = document.createElement('img'+str(i));
-            imgEL.setAttribute('src', flowers[i]);
-            dispImgs.appendChild(imgEl);
+            imgEl.setAttribute('src', flowers[i]);
+            flowDiv.appendChild(imgEl);
         }
     }
 
