@@ -56,8 +56,8 @@
         var flowDiv = document.getElementById('flowersDiv');
         for (i = 0; i < flowers.length; i++) {
             let imgEl = document.createElement('img');
-            imgEl.setAttribute('src', flowers[i][1]);
-            imgEl.appendChild(document.createTextNode(flowers[i][0]));
+            imgEl.setAttribute('src', flowers.Flower[1]);
+            imgEl.appendChild(document.createTextNode(flowers.Flower[0]));
             flowDiv.appendChild(imgEl);
         }
     }
