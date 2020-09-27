@@ -52,11 +52,12 @@
              rose,
              waterlily
        ];
+///Users/KLyons/Documents/UA_classes_FA20/ISTA330/ISTA330/practicum/week-4/images
     function dispImgs() {
         var flowDiv = document.getElementById('flowersDiv');
         for (Flower in flowers) {
             let imgEl = document.createElement('img');
-            imgEl.setAttribute('src', '\"images/' + Flower.pictureName + '\"');
+            imgEl.setAttribute('src', '\"images/' + Flower.picture + '\"');
             imgEl.appendChild(document.createTextNode(Flower.name));
             flowDiv.appendChild(imgEl);
         }
