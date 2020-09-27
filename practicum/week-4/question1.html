@@ -54,7 +54,7 @@
        ];
     function dispImgs() {
         var flowDiv = document.getElementById('flowersDiv');
-        for (i = 0; i < flowers.length; i++) {
+        for (Flower in flowers) {
             let imgEl = document.createElement('img');
             imgEl.setAttribute('src', Flower.picture);
             imgEl.appendChild(document.createTextNode(Flower.name));
