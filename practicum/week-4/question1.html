@@ -56,7 +56,7 @@
         var flowDiv = document.getElementById('flowersDiv');
         for (Flower in flowers) {
             let imgEl = document.createElement('img');
-            imgEl.setAttribute('src', '"images/'+Flower.pictureName+'"');
+            imgEl.setAttribute('src', '\"images/' + Flower.pictureName + '\"');
             imgEl.appendChild(document.createTextNode(Flower.name));
             flowDiv.appendChild(imgEl);
         }
