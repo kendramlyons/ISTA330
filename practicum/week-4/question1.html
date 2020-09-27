@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="dispImgs()">
     <div id="question">
         Using the array flowers below, 
         display the flowers. Use the div 'flowersDiv'.
@@ -51,14 +51,14 @@
              rose,
              waterlily
        ];
-    function displayImgs()
+    function dispImgs() {
         var dispImgs = document.getElementByID('flowersDiv');
         for (i = 0; i < flowers.length; i++) {
             var imgEl = document.createElement('img'+str(i));
             imgEL.setAttribute('src', flowers[i]);
             dispImgs.appendChild(imgEl);
         }
-
+    }
 
     </script>
 </body>
