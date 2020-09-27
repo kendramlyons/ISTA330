@@ -14,7 +14,8 @@
         For each flower, you should show the image
         and under the image display its name.
     </div>
-    <div id='flowersDiv'>
+    <div id="flowersDiv">
+        <img src = '' >
         
     </div>
     <script>
@@ -52,9 +53,9 @@
              waterlily
        ];
     function dispImgs() {
-        var flowDiv = document.getElementByID('flowersDiv');
+        var flowDiv = document.getElementById('flowersDiv');
         for (i = 0; i < flowers.length; i++) {
-            var imgEl = document.createElement('img');
+            let imgEl = document.createElement('img');
             imgEl.setAttribute('src', flowers[i][1]);
             imgEl.appendChild(document.createTextNode(flowers[i][0]));
             document.flowDiv.appendChild(imgEl);
