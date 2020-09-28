@@ -39,7 +39,7 @@ var largestGroupsCount = function(n) {
         if (i <= 9) {
             var newGroup = [i];
             goGs.push(newGroup);
-        }else {
+        } else {
             var addDigits = i.toString();
             addDigits = Number(addDigits[0]) + Number(addDigits[1]);
             //this loop traverses the groups in goGs to check if their first element is addDigits
@@ -50,13 +50,14 @@ var largestGroupsCount = function(n) {
             }
         }
     }
-    //this loop makes an array of the length of the groups in goGs
+    // console.log(goGs);
+    //this loop makes an array of the group lengths in goGs
     var lengthsA = [];
     for (k = 0; k < goGs.length; k++) {
         var lengthM = goGs[k].length;
         lengthsA.push(lengthM);
     }
-
+    //this loop counts repeated values in the array of froup lengths
     var count = 0; 
     for (l = 0; l < lengthsA.length; l++) {
         if (lengthsA[l] == Math.max(...lengthsA)) {
@@ -65,5 +66,5 @@ var largestGroupsCount = function(n) {
     }
     return count; 
 };
-test9 = largestGroupsCount(11);
+test9 = largestGroupsCount(12);
 console.log(test9);
