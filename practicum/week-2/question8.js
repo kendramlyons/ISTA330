@@ -13,19 +13,23 @@ output: 3
 */
 
 var d_integer = function(input) {
+    var dInts = [];
     for (i = 0; i < input.length; i++) {
-        compare = input[i];
-        count = 0; 
+        var compare = input[i];
+        var count = 0; 
         for (j = i; j < input.length; j++) {
             if (input[j] == compare) {
                 count += 1;
             }
         }
         if (count == compare) {
-            return compare;
+            dInts.push(compare);
         }
     }
-    return -1
+    if (dInts.length > 0) {
+        return Math.max(...dInts);
+    }
+    else {return -1};
 };
-// let test8 = d_integer([3,5,3,9,6,45,86,9]);
-// console.log(test8)
+let test8 = d_integer([3,6,3,9,6,45,86,9]);
+console.log(test8)
