@@ -23,5 +23,5 @@ var largestNumberIsAtLeastTwice = function(input) {
         return false;
     }
 }; 
-test1 = largestNumberIsAtLeastTwice([3,2,21,50]);
+test1 = largestNumberIsAtLeastTwice([3,2,26,50]);
 console.log(test1);
