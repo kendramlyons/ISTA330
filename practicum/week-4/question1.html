@@ -65,9 +65,12 @@
         for (let f of flowers) {
             let imgEl = document.createElement('img');
             imgEl.setAttribute('src', 'images/' + f.picture);
-
-            imgEl.appendChild(document.createTextNode(f.name));
+            imgEl.setAttribute('alt', f.name);
+            // imgEl.appendChild(document.createElement('caption');
             flowDiv.appendChild(imgEl);
+            if (flowers.indexOf(f) == (flowers.length/2)-1){
+                flowDiv.appendChild(document.createElement('BR'));
+            }
         }
     }
     </script>
