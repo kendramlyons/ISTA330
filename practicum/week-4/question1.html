@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div#flowersdiv {margin: 2px ; display: inline;}
+        div.img {display:inline; margin: 0px; padding:0px; border:dotted;}
+        div.txt {float:none; margin: 0px; padding:0px}
+    </style>
 </head>
 <body onload="dispImgs()">
     <div id="question">
@@ -15,15 +20,7 @@
         and under the image display its name.
     </div>
     <div id="flowersDiv">
-        <!-- <img src = 'images/cherryblossom.png' >
-        <img src = 'images/daffodil.png' >
-        <img src = 'images/daisy.jpg' >
-        <img src = 'images/lily.jpg' >
-        <br>
-        <img src = 'images/rose.png' >
-        <img src = 'images/sunflower.png' >
-        <img src = 'images/tulip.png' >
-        <img src = 'images/waterlily.png' > --> 
+
     </div>
     <script>
         /*
@@ -60,26 +57,29 @@
              waterlily
        ];
 ///Users/KLyons/Documents/UA_classes_FA20/ISTA330/ISTA330/practicum/week-4/images
+            // let figEl = document.createElement('figure');
+            // let figCap = document.createElement('figcaption');
+            // let text = document.createTextNode(f.name);
+            // figCap.appendChild(text);
+            // figEl.appendChild(imgEl);
+            // figEl.appendChild(figCap);
+            // figEl.setAttribute('display', 'inline')
+            // flowDiv.appendChild(figEl);
     function dispImgs() {
         var flowDiv = document.getElementById('flowersDiv');
         for (let f of flowers) {
             let imgEl = document.createElement('img');
             imgEl.setAttribute('src', 'images/' + f.picture);
             imgEl.setAttribute('alt', f.name);
-            // let fCap = document.createElement('txt');
-            // let text = document.createTextNode(f.name);
-            // fCap.appendChild(text);
-            // imgEl.insertAdjacentElement('afterend', fCap);
-            let figEl = document.createElement('figure');
-            let figCap = document.createElement('figcaption');
+            imgEl.setAttribute('id', f.name)
+            let fCap = document.createElement('label');
+            fCap.setAttribute('for', f.name);
             let text = document.createTextNode(f.name);
-            figCap.appendChild(text);
-            figEl.appendChild(imgEl);
-            figEl.appendChild(figCap);
-            figEl.setAttribute('display', 'inlines')
-            flowDiv.appendChild(figEl);
-            // flowDiv.appendChild(imgEl);
-            // flowDiv.appendChild(fCap);
+            fCap.appendChild(text);
+            imgEl.insertAdjacentElement('afterend', fCap);
+            flowDiv.appendChild(fCap);
+            flowDiv.appendChild(imgEl);
+
             if (flowers.indexOf(f) == (flowers.length/2)-1){
                 flowDiv.appendChild(document.createElement('BR'));
             }
