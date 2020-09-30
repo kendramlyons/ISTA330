@@ -66,12 +66,20 @@
             let imgEl = document.createElement('img');
             imgEl.setAttribute('src', 'images/' + f.picture);
             imgEl.setAttribute('alt', f.name);
-            // imgEl.appendChild(document.createElement('caption');
-            let figEL = document.createElement('figure');
+            // let fCap = document.createElement('txt');
+            // let text = document.createTextNode(f.name);
+            // fCap.appendChild(text);
+            // imgEl.insertAdjacentElement('afterend', fCap);
+            let figEl = document.createElement('figure');
             let figCap = document.createElement('figcaption');
+            let text = document.createTextNode(f.name);
+            figCap.appendChild(text);
             figEl.appendChild(imgEl);
             figEl.appendChild(figCap);
-            flowDiv.appendChild(imgEl);
+            figEl.setAttribute('display', 'inlines')
+            flowDiv.appendChild(figEl);
+            // flowDiv.appendChild(imgEl);
+            // flowDiv.appendChild(fCap);
             if (flowers.indexOf(f) == (flowers.length/2)-1){
                 flowDiv.appendChild(document.createElement('BR'));
             }
