@@ -20,5 +20,5 @@ var median = function(input) {
         return medValue;
     }
 };
-test6 = median([1, 2, 2, 3, 4, 7, 9]);
-console.log(test6);
+// test6 = median([1,2,2,8,5,7,9]);
+// console.log(test6);
