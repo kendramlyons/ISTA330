@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload=imageTable()>
     <div id="question">
         1. Display the flowers as per question 1.<br />
         2. Add the following functionality to the page:<br />
@@ -89,17 +89,50 @@
         let tulip = new Flower('Tulip', 'tulip.png');
         let rose = new Flower('Rose', 'rose.png');
         let waterlily = new Flower('Water lily', 'waterlily.png');
-
+       
         let flowers = [
-            daffodil,
-            cherryblossom,
-            lily,
-            daisy,
-            sunflower,
-            tulip,
-            rose,
-            waterlily
-        ];
+             cherryblossom,
+             daffodil,
+             daisy,
+             lily,
+             rose,
+             sunflower,
+             tulip,
+             waterlily
+       ];
+    function imgTable() {
+        const flowDiv = document.getElementById('flowersDiv');
+        let imgTbl = document.createElement('table');
+        imgTbl.setAttribute('outerWidth', '645px' )
+        let tblBdy = document.createElement('tbody');
+        for (let i = 0; i < 2; i++) {
+            let tblRow = document.createElement('tr');
+            for (let j = 0; j < 4; j++) { 
+                let tCell = document.createElement('td'); //create a cell for the image and name
+                let imgEl = document.createElement('img'); //create an image element
+                let flower; 
+                if (i == 0) { //indices in row 1
+                    flower = flowers[i+j];
+                }
+                else if (i ==1) { //indices in row 2
+                    flower = flowers[4+j];
+                }
+                imgEl.setAttribute('src', 'images/' + flower.picture);
+                imgEl.setAttribute('alt', flower.name);
+                imgEl.setAttribute('id', flower.name);
+                tCell.appendChild(imgEl);
+                let text = document.createTextNode(flower.name);  //create a text node for the flower name
+                tCell.appendChild(text);
+                tblRow.appendChild(tCell);
+            }
+            tblBdy.appendChild(tblRow);
+        }
+        imgTbl.appendChild(tblBdy);
+        flowDiv.appendChild(imgTbl);
+    };
+    function moveToFirst() {
+
+    }
     </script>
 </body>
 
