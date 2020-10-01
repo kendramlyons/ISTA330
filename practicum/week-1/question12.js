@@ -27,5 +27,5 @@ var maxBalanceNumber = function(input) {
     }
     return balSubStrs;
   };
-test12 = maxBalanceNumber('aaababbba');
+test12 = maxBalanceNumber('abaabbabab');
 console.log(test12);
