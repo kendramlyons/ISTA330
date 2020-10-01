@@ -14,7 +14,7 @@
     </style>
 </head>
 
-<body onload=imgTable()>
+<body onload=imgTable(flowers)>
     <div id="question">
         1. Display the flowers as per question 1.<br />
         2. Add the following functionality to the page:<br />
@@ -107,31 +107,36 @@
              waterlily
        ];
     function shiftFlowers(first) {
-
+        shiftedFlow = [];
+        shiftedFlow.push(flowers.slice(0,flowers.indexOf(first)));
+        shiftedFlow.unshift(flowers.slice(flowers.indexOf(first)));
+        return shiftedFlow;
     };
-    function imgTable() {
+    function imgTable(flowArray) {
         const flowDiv = document.getElementById('flowersDiv');
         let imgTbl = document.createElement('table');
-        imgTbl.setAttribute('outerWidth', '645px' )
         let tblBdy = document.createElement('tbody');
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 2; i++) { //create rows
             let tblRow = document.createElement('tr');
-            for (let j = 0; j < 4; j++) { 
+            for (let j = 0; j < 4; j++) {  //create cells with image and flower name
                 let tCell = document.createElement('td'); //create a cell for the image and name
                 let imgEl = document.createElement('img'); //create an image element
-                let flower; 
+                var flower; 
                 if (i == 0) { //indices in row 1
-                    flower = flowers[i+j];
+                    flower = flowArray[i+j];
                 }
                 else if (i ==1) { //indices in row 2
-                    flower = flowers[4+j];
+                    flower = flowArray[4+j];
                 }
                 imgEl.setAttribute('src', 'images/' + flower.picture);
                 imgEl.setAttribute('alt', flower.name);
                 imgEl.setAttribute('id', flower.name);
-                tCell.appendChild(imgEl);
+                //add onclick event 
+                // let event = imgTable(shiftFlowers(flower.name));
+                // imgEl.setAttribute('onclick', "\'"+event+"\'");
+                tCell.appendChild(imgEl); //append image to cell
                 let text = document.createTextNode(flower.name);  //create a text node for the flower name
-                tCell.appendChild(text);
+                tCell.appendChild(text); //append flower name to cell 
                 tblRow.appendChild(tCell);
             }
             tblBdy.appendChild(tblRow);
@@ -139,9 +144,6 @@
         imgTbl.appendChild(tblBdy);
         flowDiv.appendChild(imgTbl);
     };
-    function moveToFirst() {
-
-    }
     </script>
 </body>
 
