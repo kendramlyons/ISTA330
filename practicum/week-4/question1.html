@@ -6,8 +6,8 @@
     <title>Document</title>
     <style>
         div#flowersdiv {margin: 2px ; display: inline;}
-        div.img {display:inline; margin: 0px; padding:0px; border:dotted;}
-        div.txt {float:none; margin: 0px; padding:0px}
+        div.img {margin: 0px; padding:0px; width:158px; height: 158px;}
+        div.label {margin: 0px; padding:0px; width: 158px;}
     </style>
 </head>
 <body onload="dispImgs()">
@@ -66,25 +66,24 @@
             // figEl.setAttribute('display', 'inline')
             // flowDiv.appendChild(figEl);
     function dispImgs() {
+        sortedFlowers=flowers.sort()
         var flowDiv = document.getElementById('flowersDiv');
-        for (let f of flowers) {
+        for (let f of sortedFlowers) {
             let imgEl = document.createElement('img');
             imgEl.setAttribute('src', 'images/' + f.picture);
             imgEl.setAttribute('alt', f.name);
             imgEl.setAttribute('id', f.name)
             let fCap = document.createElement('label');
-            fCap.setAttribute('for', f.name);
             let text = document.createTextNode(f.name);
+            fCap.setAttribute('for', f.name);
             fCap.appendChild(text);
-            imgEl.insertAdjacentElement('afterend', fCap);
             flowDiv.appendChild(fCap);
             flowDiv.appendChild(imgEl);
-
-            if (flowers.indexOf(f) == (flowers.length/2)-1){
+            if (sortedFlowers.indexOf(f) == (sortedFlowers.length/2)-1) {
                 flowDiv.appendChild(document.createElement('BR'));
             }
         }
-    }
+    };
     </script>
 </body>
 </html>
