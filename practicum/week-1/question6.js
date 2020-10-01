@@ -7,6 +7,7 @@ output: 3
 
 var median = function(input) {
     //test for odd length SUCCESS
+    input.sort();
     if (input.length % 2 == 1) {
         var medIndex = (input.length - 1)/2; // (7-1)/2 = 3
         return input[medIndex];
@@ -19,3 +20,5 @@ var median = function(input) {
         return medValue;
     }
 };
+test6 = median([1, 2, 2, 3, 4, 7, 9]);
+console.log(test6);
