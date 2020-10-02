@@ -106,14 +106,23 @@
              tulip,
              waterlily
        ];
-    function shiftFlowers(first) {
-        shiftedFlow = [];
-        shiftedFlow.push(flowers.slice(0,flowers.indexOf(first)));
-        shiftedFlow.unshift(flowers.slice(flowers.indexOf(first)));
-        return shiftedFlow;
+    function shiftFlowers(event) {
+        console.log(event.target.id);
+        const first = event.target.id;
+
+        let index = flowers.findIndex(x => x.name == first);
+        let firstHalf = flowers.slice(0, index);
+        let secondHalf = flowers.slice(index);
+        let shiftedFlow = secondHalf.concat(firstHalf)
+        imgTable(shiftedFlow);
+        // return shiftedFlow;
+        // imgTable(shiftedFlow);
     };
     function imgTable(flowArray) {
         const flowDiv = document.getElementById('flowersDiv');
+        if (flowDiv.hasChildNodes()) {
+            flowDiv.removeChild(flowDiv.childNodes[0]);
+        }
         let imgTbl = document.createElement('table');
         let tblBdy = document.createElement('tbody');
         for (let i = 0; i < 2; i++) { //create rows
@@ -132,10 +141,8 @@
                 imgEl.setAttribute('alt', flower.name);
                 imgEl.setAttribute('id', flower.name);
                 //add onclick event 
-                // let event = imgTable(shiftFlowers(flower.name));
-                // imgEl.setAttribute('onclick', "\'"+event+"\'");
+                imgEl.setAttribute('onclick', 'shiftFlowers(event)');
                 tCell.appendChild(imgEl); //append image to cell
-                // tCell.onclick = imgTable(shiftFlowers(flower.name));
                 let text = document.createTextNode(flower.name);  //create a text node for the flower name
                 tCell.appendChild(text); //append flower name to cell 
                 tblRow.appendChild(tCell);
